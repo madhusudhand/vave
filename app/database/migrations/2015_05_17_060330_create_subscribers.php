@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateListSubscribers extends Migration {
+class CreateSubscribers extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,7 @@ class CreateListSubscribers extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('list_subscribers', function(Blueprint $table)
+		Schema::create('subscribers', function(Blueprint $table)
 		{
 			$table->increments('ls_id');
             
@@ -38,7 +38,7 @@ class CreateListSubscribers extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('list_subscribers');
+		Schema::drop('subscribers');
 	}
 
 }

@@ -22,7 +22,7 @@ class CreateSubscriptions extends Migration {
             $table->boolean('subscribed')->default(true);
             
             $table->integer('ls_id')->unsigned();
-            $table->foreign('ls_id')->references('ls_id')->on('list_subscribers');
+            $table->foreign('ls_id')->references('ls_id')->on('subscribers');
             
             //common columns
 			$table->timestamps();
