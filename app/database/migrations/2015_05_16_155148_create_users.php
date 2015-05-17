@@ -19,9 +19,9 @@ class CreateUsers extends Migration {
             $table->string('password',64);
             $table->string('full_name');
             $table->enum('status', array('A','L'))->default('A'); // active, locked
-            $table->string('signup_token', 30)->unique();
+            $table->string('signup_token', 30)->nullable()->unique();
             $table->string('password_token', 30)->unique()->nullable();
-            $table->timestamp('generated_at');
+            $table->timestamp('generated_at')->nullable();
             
             $table->rememberToken();
             
