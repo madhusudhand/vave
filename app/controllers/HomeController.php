@@ -13,9 +13,9 @@ class HomeController extends BaseController {
     
     public function index(){
         if($this->checkAppConfig())
-            return View::make('hello');
+            return View::make('app.index');
         else
-            return Redirect::to('configure');
+            return Redirect::to('setup');
     }
 	
 }

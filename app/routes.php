@@ -12,5 +12,5 @@
 */
 
 Route::get('/', ['as'=>'home','uses'=>'HomeController@index']);
-Route::get('/configure', ['as'=>'configure','uses'=>'ConfigController@index']);
+Route::get('/setup', ['as'=>'setup','uses'=>'SetupController@index']);
 
