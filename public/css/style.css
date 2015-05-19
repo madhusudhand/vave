@@ -1,16 +1,7 @@
-.header{
-    border-bottom: 1px solid #CCC;
-    margin-bottom: 30px;
-    height: 80px;
+.navbar-fixed-top{
+    background: #eee;
 }
-.sidebar{
-    width: 200px;
-    background: #FFF;
-    margin-right: -200px;
-    float: left;
-}
-.content-wrapper{
-    width: 100%;
-    margin-left: 200px;
-    float: left;
+.navbar-brand{
+    margin: 0;
+    font-size: 30px;
 }
