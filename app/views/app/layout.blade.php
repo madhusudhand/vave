@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>@yield('title')</title>
+    <title>Vave | Send email via Amazon SES</title>
 <!--    <link rel="shortcut icon" href="{{ URL::asset('img/fav.png') }}"/>-->
     {{ HTML::style('//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css') }}
     {{ HTML::style('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')}}
@@ -13,9 +13,7 @@
     
 <body>
     
-    @section('body')
-        ...
-    @show
+    @yield('body')
     
     
     {{ HTML::script('js/script.js') }}
