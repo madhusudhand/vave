@@ -16,11 +16,11 @@
             
         <div class="col-sm-10">
             
-            @include('app.dashboard')
-            @include('app.campaigns')
-            @include('app.lists')
-            @include('app.templates')
-            @include('app.reports')
+            @include('app.templates.dashboard')
+            @include('app.templates.campaigns')
+            @include('app.templates.lists')
+            @include('app.templates.templates')
+            @include('app.templates.reports')
 
             @include('app.modal-dialog')
             

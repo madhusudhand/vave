@@ -16,10 +16,9 @@
                         <span class="caret"></span>
                     </a>
                     <ul id="g-account-menu" class="dropdown-menu" role="menu">
-                        <li><a href="#">My Profile</a></li>
+                        <li><a href="/logout"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
                     </ul>
                 </li>
-                <li><a href="/logout"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
             </ul>
         </div>
     </div>
