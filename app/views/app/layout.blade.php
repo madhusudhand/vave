@@ -8,6 +8,9 @@
     {{ HTML::style('//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css') }}
     {{ HTML::style('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')}}
     {{ HTML::style('css/style.css') }}
+    
+    {{ HTML::script('//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js') }}
+    {{ HTML::script('//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js') }}
     {{ HTML::script('//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js') }}
 </head>
     
@@ -16,7 +19,11 @@
     @yield('body')
     
     
-    {{ HTML::script('js/script.js') }}
+    {{ HTML::script('js/app.core.js') }}
+    {{ HTML::script('js/app.js') }}
+    
+    {{ HTML::script('js/controllers/main.js') }}
+    
     {{ HTML::script('//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js') }}
     
     <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
