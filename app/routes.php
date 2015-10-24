@@ -50,6 +50,12 @@ Route::group(['prefix' => 'api','before' => 'auth.basic'], function(){
                ['as'=>'projects', 'uses' => 'ProjectsController@index']);
     
     
+    Route::resource('project.template','ProjectsController',
+               ['only'=>['store','show','update','destroy']]);
+    Route::get('/project/{project}/templates', 
+               ['as'=>'project.templates', 'uses' => 'TemplatesController@index']);
+    
+    
     
 });
 

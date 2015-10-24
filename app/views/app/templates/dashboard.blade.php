@@ -1,6 +1,7 @@
 <div ng-controller="SesDashboardController as sesCtrl">
     
     
+<!--
     <ul class="list-inline pull-right">
         <li><a href="#"><i class="glyphicon glyphicon-cog"></i></a></li>
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-comment"></i><span class="count">3</span></a>
@@ -13,6 +14,7 @@
         <li><a href="#"><i class="glyphicon glyphicon-user"></i></a></li>
         <li><a title="Add Widget" data-toggle="modal" href="#addWidgetModal"><span class="glyphicon glyphicon-plus-sign"></span> Add Widget</a></li>
     </ul>
+-->
 
     <strong><i class="glyphicon glyphicon-dashboard"></i> Dashboard</strong>
     <hr>
@@ -40,10 +42,10 @@
                 <div class="panel-body">
                     <div class="alert alert-info">
                         <button type="button" class="close" data-dismiss="alert">×</button>
-                        This is a dismissable alert.. just sayin'.
+                        This is not yet complete!!
                     </div>
-                    <p>This is a dashboard-style layout that uses Bootstrap 3. You can use this template as a starting point to create something more unique.</p>
-                    <p>Visit the Bootstrap Playground at <a href="http://bootply.com">Bootply</a> to tweak this layout or discover more useful code snippets.</p>
+                    <p>This version of software is just a framework created to send emails via Amazon SES</p>
+                    <p>It is growing a lot in the next version. For details visit: <a href="http://vave.io">Vave.io</a></p>
                 </div>
             </div>
         </div>
