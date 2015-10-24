@@ -1,26 +1,27 @@
 <?php
 
-class ListController extends \BaseController {
+class SubscriberController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-	public function index($proj_id)
+	public function index($list_id)
 	{
 		try{
-            $lists = DB::table('lists as l')
-                        ->where('l.proj_id', $proj_id)
-                        ->whereNull('l.deleted_at')
-                        ->select('l.list_id as list_id',
-                                 'l.list_name as list_name',
-                                 'l.list_desc as list_desc'
+            $subscribers = DB::table('subscribers as s')
+                        ->where('s.list_id', $list_id)
+                        ->whereNull('s.deleted_at')
+                        ->select('s.ls_id as ls_id',
+                                 's.full_name as full_name',
+                                 's.email as email',
+                                 's.status as status'
                                 )
                         ->get();
         
             return Response::json(array(
-                'lists'=>$lists,
+                'subscribers'=>$subscribers,
                 'success'=>array(
                     'message' => 'ok',
                     'code' => 200

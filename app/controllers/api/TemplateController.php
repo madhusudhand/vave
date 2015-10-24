@@ -1,6 +1,6 @@
 <?php
 
-class TemplatesController extends \BaseController {
+class TemplateController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.

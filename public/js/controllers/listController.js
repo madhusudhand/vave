@@ -2,7 +2,7 @@
     'use strict';
     
     angular.module('app')
-    .controller('ListController', ['$filter', 'listService', function($filter, listService) {
+    .controller('ListController', ['$filter', 'listService', 'subscriberService', function($filter, listService, subscriberService) {
 
         var current_list = 0;
         
@@ -23,6 +23,7 @@
         
         function loadList(id){
             current_list = id;
+            subscriberService.loadSubscribers(id);
         }
         
     }]);

@@ -19,7 +19,7 @@
     <div class="col-md-9 no-margin">
         
         
-<div class="table-responsive">
+<div class="table-responsive" ng-controller="SubscriberController as subCtrl">
     <table class="table table-striped">
         <thead>
             <tr>
@@ -29,30 +29,10 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Madhusudhan</td>
-                <td>madhusudhan.dollu@gmail.com</td>
-                <td>Subscribed</td>
-            </tr>
-            <tr>
-                <td>User</td>
-                <td>user@vave.io</td>
-                <td>Subscribed</td>
-            </tr>
-            <tr>
-                <td>Another User</td>
-                <td>anotheruser@vave.io</td>
-                <td>Unsubscribed</td>
-            </tr>
-            <tr>
-                <td>..</td>
-                <td>..</td>
-                <td>..</td>
-            </tr>
-            <tr>
-                <td>..</td>
-                <td>..</td>
-                <td>..</td>
+            <tr ng-repeat="s in subCtrl.subscribers()">
+                <td>[[ s.full_name ]]</td>
+                <td>[[ s.email ]]</td>
+                <td>[[ s.status ]]</td>
             </tr>
         </tbody>
     </table>
