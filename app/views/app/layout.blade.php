@@ -22,7 +22,9 @@
     {{ HTML::script('js/app.core.js') }}
     {{ HTML::script('js/app.js') }}
     
-    {{ HTML::script('js/controllers/main.js') }}
+    {{ HTML::script('js/controllers/nav.js') }}
+    {{ HTML::script('js/services/project.js') }}
+    {{ HTML::script('js/services/global.js') }}
     
     {{ HTML::script('//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js') }}
     

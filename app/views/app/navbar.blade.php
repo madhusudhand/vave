@@ -1,4 +1,6 @@
-<div id="top-nav" class="navbar navbar-default navbar-fixed-top">
+<div id="top-nav" class="navbar navbar-default navbar-fixed-top"
+     ng-controller="NavController as navCtrl">
+    
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -11,13 +13,17 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="">
-                        Select Project
+                    <a class="dropdown-toggle" role="button" 
+                       data-toggle="dropdown" href="">
+                        [[ navCtrl.project().project_name ]]
                         <span class="caret"></span>
                     </a>
                     <ul id="g-account-menu" class="dropdown-menu" role="menu">
-                        <li><a href="/logout">Project 1</a></li>
-                        <li><a href="/logout">Project 2</a></li>
+                        <li ng-repeat="p in navCtrl.projects()">
+                            <a href="" ng-click="navCtrl.switchProject(p.project_id)">
+                                [[ p.project_name ]]
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 

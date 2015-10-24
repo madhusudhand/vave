@@ -16,27 +16,31 @@
                 $routeProvider
                 .when('/', {    // route for the home page
                     templateUrl : '/pages/dashboard',
-                    controller  : 'MainController'
+                    controller  : 'NavController'
+                })
+                .when('#', {    // route for the home page
+                    templateUrl : '/pages/dashboard',
+                    controller  : 'NavController'
                 })
                 .when('/dashboard', { // route for the about page
                     templateUrl : '/pages/dashboard',
-                    controller  : 'MainController'
+                    controller  : 'NavController'
                 })
                 .when('/reports', { // route for the contact page
                     templateUrl : '/pages/reports',
-                    controller  : 'MainController'
+                    controller  : 'NavController'
                 })
                 .when('/campaigns', { // route for the contact page
                     templateUrl : '/pages/campaigns',
-                    controller  : 'MainController'
+                    controller  : 'NavController'
                 })
                 .when('/lists', { // route for the contact page
                     templateUrl : '/pages/lists',
-                    controller  : 'MainController'
+                    controller  : 'NavController'
                 })
                 .when('/templates', { // route for the contact page
                     templateUrl : '/pages/templates',
-                    controller  : 'MainController'
+                    controller  : 'NavController'
                 })
                 .otherwise({
                     redirectTo: '/'

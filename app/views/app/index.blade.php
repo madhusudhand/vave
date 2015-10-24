@@ -7,8 +7,7 @@
 
     @include('app.navbar')
 
-    <div class="container-fluid" style="margin-top:70px;"
-         >
+    <div class="container-fluid" style="margin-top:70px;">
         <div class="row">
             <div class="col-sm-2">
 
