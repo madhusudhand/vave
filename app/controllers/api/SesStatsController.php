@@ -1,6 +1,6 @@
 <?php
 
-use Aws\Ses\SesClient;
+//use Lib\SesStats;
 
 
 class SesStatsController extends \BaseController {
@@ -12,20 +12,25 @@ class SesStatsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$client = SesClient::factory(array(
-            'credentials' => array(
-                'key'    => '',
-                'secret' => '',
-            ),
-            'region'  => '',
-        ));
-        
-        return $client->getSendStatistics([]);
-        
-//        return ['quota'=>$client->getSendQuota([]),
-//                'stats'=>$client->getSendStatistics([])
-//               ];
-        
+        try{
+            $stats = SesStats::getStats(Project::getAwsCredentials(1));
+            return $stats;
+            return Response::json(array(
+                'stats'=>$stats,
+                'success'=>array(
+                    'message' => 'ok',
+                    'code' => 200
+                )
+            ));
+            
+        }catch(Exception $ex){
+            return Response::json(array(
+                'error'=>array(
+                    'message' => 'exception',
+                    'code' => 500
+                )
+            ));
+        }
         
 	}
 

@@ -1,10 +1,12 @@
 <?php
 
+//namespace Lib;
+    
 use Aws\Ses\SesClient;
 
 class SesStats {
 
-	public function getStats($credentials)
+	public static function getStats($credentials)
 	{
 		$client = SesClient::factory($credentials);
         

@@ -30,7 +30,7 @@ class ProjectsController extends \BaseController {
             return Response::json(array(
                 'error'=>array(
                     'message' => 'exception',
-                    'code' => 400
+                    'code' => 500
                 )
             ));
         }
