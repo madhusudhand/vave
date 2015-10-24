@@ -2,7 +2,7 @@
     'use strict';
     
     angular.module('app')
-    .controller('NavController', ['sesStatsService', function(sesStatsService) {
+    .controller('SesDashboardController', ['sesStatsService', function(sesStatsService) {
 
         /* specification */
         this.stats = stats;
