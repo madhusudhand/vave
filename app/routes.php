@@ -44,22 +44,22 @@ Route::group(['prefix' => 'api','before' => 'auth.basic'], function(){
     Route::get('/ses/statistics/{project}', ['as'=>'ses','uses'=>'SesStatsController@statistics']);
     
     
-    Route::resource('project','ProjectsController',
+    Route::resource('project','ProjectController',
                ['only'=>['store','show','update','destroy']]);
     Route::get('/projects', 
-               ['as'=>'projects', 'uses' => 'ProjectsController@index']);
+               ['as'=>'projects', 'uses' => 'ProjectController@index']);
     
     
-    Route::resource('project.template','ProjectsController',
+    Route::resource('project.template','ProjectController',
                ['only'=>['store','show','update','destroy']]);
     Route::get('/project/{project}/templates', 
-               ['as'=>'project.templates', 'uses' => 'TemplatesController@index']);
+               ['as'=>'project.templates', 'uses' => 'TemplateController@index']);
     
     
-    Route::resource('project.lists','ListsController',
+    Route::resource('project.lists','ListController',
                ['only'=>['store','show','update','destroy']]);
     Route::get('/project/{project}/lists', 
-               ['as'=>'project.lists', 'uses' => 'ListsController@index']);
+               ['as'=>'project.lists', 'uses' => 'ListController@index']);
     
     
     
