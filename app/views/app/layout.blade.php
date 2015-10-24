@@ -22,15 +22,15 @@
     {{ HTML::script('js/app.core.js') }}
     {{ HTML::script('js/app.js') }}
     
-    {{ HTML::script('js/controllers/nav.js') }}
-    {{ HTML::script('js/controllers/ses.dashboard.js') }}
-    {{ HTML::script('js/controllers/template.js') }}
+    {{ HTML::script('js/controllers/navController.js') }}
+    {{ HTML::script('js/controllers/sesDashboardController.js') }}
+    {{ HTML::script('js/controllers/templateController.js') }}
     {{ HTML::script('js/controllers/listController.js') }}
     
-    {{ HTML::script('js/services/global.js') }}
-    {{ HTML::script('js/services/ses.stats.js') }}
-    {{ HTML::script('js/services/project.js') }}
-    {{ HTML::script('js/services/template.js') }}
+    {{ HTML::script('js/services/globalService.js') }}
+    {{ HTML::script('js/services/sesStatsService.js') }}
+    {{ HTML::script('js/services/projectService.js') }}
+    {{ HTML::script('js/services/templateService.js') }}
     {{ HTML::script('js/services/listService.js') }}
     
     
