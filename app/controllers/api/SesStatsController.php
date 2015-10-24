@@ -10,13 +10,12 @@ class SesStatsController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function statistics($proj_id)
 	{
         try{
-            $stats = SesStats::getStats(Project::getAwsCredentials(1));
-            return $stats;
+            $stats = SesStats::getStatistics(Project::getAwsCredentials($proj_id));
             return Response::json(array(
-                'stats'=>$stats,
+                'statistics'=>$stats,
                 'success'=>array(
                     'message' => 'ok',
                     'code' => 200
@@ -33,76 +32,5 @@ class SesStatsController extends \BaseController {
         }
         
 	}
-
-
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
-
-
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
-
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
-
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
-
 
 }

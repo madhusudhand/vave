@@ -6,11 +6,11 @@ use Aws\Ses\SesClient;
 
 class SesStats {
 
-	public static function getStats($credentials)
+	public static function getStatistics($credentials)
 	{
 		$client = SesClient::factory($credentials);
         
-        return $client->getSendStatistics([]);
+        return $client->getSendQuota([])->toArray();
         
 //        return ['quota'=>$client->getSendQuota([]),
 //                'stats'=>$client->getSendStatistics([])

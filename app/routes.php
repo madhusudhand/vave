@@ -19,7 +19,7 @@ Route::get('/logout', ['as'=>'logout','uses'=>'HomeController@logout']);
 
 
 Route::get('/ses', ['as'=>'ses','uses'=>'SesMailerController@index']);
-Route::get('/stats', ['as'=>'ses','uses'=>'SesStatsController@index']);
+
 
 Route::group(['prefix' => 'pages','before' => 'auth.basic'], function(){
     
@@ -40,6 +40,9 @@ Route::group(['prefix' => 'pages','before' => 'auth.basic'], function(){
    *************/
 
 Route::group(['prefix' => 'api','before' => 'auth.basic'], function(){
+    
+    Route::get('/ses/statistics/{project}', ['as'=>'ses','uses'=>'SesStatsController@statistics']);
+    
     
     Route::resource('project','ProjectsController',
                ['only'=>['store','show','update','destroy']]);

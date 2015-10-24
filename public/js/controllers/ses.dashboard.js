@@ -5,13 +5,13 @@
     .controller('SesDashboardController', ['sesStatsService', function(sesStatsService) {
 
         /* specification */
-        this.stats = stats;
+        this.statistics = statistics;
         
         
         
         /* implementations */
-        function stats(){
-            return {};
+        function statistics(){
+            return sesStatsService.statistics();
         }
         
         

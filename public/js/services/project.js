@@ -32,9 +32,8 @@
             $http.get(url, {})
             .then(function(r){
                 projects = r.data.projects;
-                console.log(projects);
             }).catch(function(ex){
-                console.log(ex);
+                //console.log(ex);
             });
         }
         

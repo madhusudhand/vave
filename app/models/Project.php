@@ -18,15 +18,13 @@ class Project extends \BaseEloquent {
                             )
                     ->first();
         
-        $c = array(
+        return array(
                 'credentials' => array(
                     'key'    => $aws->iam_access_key,
                     'secret' => $aws->iam_secret_key,
                 ),
                 'region'  => $aws->iam_region,
              );
-        
-        return $c;
     }
     
 }
