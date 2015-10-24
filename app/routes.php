@@ -65,7 +65,13 @@ Route::group(['prefix' => 'api','before' => 'auth.basic'], function(){
     Route::resource('list.subscriber','SubscriberController',
                ['only'=>['store','show','update','destroy']]);
     Route::get('/list/{list}/subscribers', 
-               ['as'=>'project.lists', 'uses' => 'SubscriberController@index']);
+               ['as'=>'list.subscribers', 'uses' => 'SubscriberController@index']);
+    
+    
+    Route::resource('project.campaign','CampaignController',
+               ['only'=>['store','show','update','destroy']]);
+    Route::get('/project/{project}/campaigns', 
+               ['as'=>'project.campaigns', 'uses' => 'CampaignController@index']);
     
     
 });

@@ -27,6 +27,7 @@
     {{ HTML::script('js/controllers/templateController.js') }}
     {{ HTML::script('js/controllers/listController.js') }}
     {{ HTML::script('js/controllers/subscriberController.js') }}
+    {{ HTML::script('js/controllers/campaignController.js') }}
     
     {{ HTML::script('js/services/globalService.js') }}
     {{ HTML::script('js/services/sesStatsService.js') }}
@@ -34,6 +35,7 @@
     {{ HTML::script('js/services/templateService.js') }}
     {{ HTML::script('js/services/listService.js') }}
     {{ HTML::script('js/services/subscriberService.js') }}
+    {{ HTML::script('js/services/campaignService.js') }}
     
     
     {{ HTML::script('//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js') }}
