@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" ng-controller="ListController as listCtrl">
     <div class="col-md-3 no-margin">
         
         <div class="panel panel-default">
@@ -7,9 +7,9 @@
             </div>
             <div class="panel-body">
                 <div class="list-group">
-                    <a href="" class="list-group-item active">Trial Users</a>
-                    <a href="" class="list-group-item">Customers</a>
-                    <a href="" class="list-group-item">Subscribers</a>
+                    <a href="" class="list-group-item"
+                       ng-repeat="l in listCtrl.lists()"
+                       ng-click="listCtrl.loadList(l.list_id)">[[l.list_name]]</a>
                 </div>
             </div>
         </div>

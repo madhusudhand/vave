@@ -25,11 +25,13 @@
     {{ HTML::script('js/controllers/nav.js') }}
     {{ HTML::script('js/controllers/ses.dashboard.js') }}
     {{ HTML::script('js/controllers/template.js') }}
+    {{ HTML::script('js/controllers/listController.js') }}
     
     {{ HTML::script('js/services/global.js') }}
     {{ HTML::script('js/services/ses.stats.js') }}
     {{ HTML::script('js/services/project.js') }}
     {{ HTML::script('js/services/template.js') }}
+    {{ HTML::script('js/services/listService.js') }}
     
     
     {{ HTML::script('//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js') }}

@@ -56,6 +56,12 @@ Route::group(['prefix' => 'api','before' => 'auth.basic'], function(){
                ['as'=>'project.templates', 'uses' => 'TemplatesController@index']);
     
     
+    Route::resource('project.lists','ListsController',
+               ['only'=>['store','show','update','destroy']]);
+    Route::get('/project/{project}/lists', 
+               ['as'=>'project.lists', 'uses' => 'ListsController@index']);
+    
+    
     
 });
 
