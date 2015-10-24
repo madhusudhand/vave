@@ -10,11 +10,7 @@
                     $interpolateProvider.endSymbol(']]');
                 })
     
-        .config(['$httpProvider', '$routeProvider', 
-                 function($httpProvider, $routeProvider) {
-                // inject interceptors
-                //$httpProvider.interceptors.push('httpInterceptor');
-            
+        .config(['$routeProvider', function($routeProvider) {
             
                 // Route providers
                 $routeProvider

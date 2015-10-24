@@ -6,11 +6,11 @@
     
     .factory('httpInterceptor', ['$q', function($q){
         return {
-             'request': function (config) {
-                 var prefix = '/api/';
-                 config.url = prefix + config.url;
-                 return config || $q.when(config);
-             },
+//             'request': function (config) {
+//                 var prefix = '/api/';
+//                 config.url = prefix + config.url;
+//                 return config || $q.when(config);
+//             },
             
 //            response: function(res) {
 //                /* This is the code that transforms the response. `res.data` is the

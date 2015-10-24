@@ -18,6 +18,9 @@ Route::post('/login', ['as'=>'login.check','uses'=>'HomeController@checkLogin'])
 Route::get('/logout', ['as'=>'logout','uses'=>'HomeController@logout']);
 
 
+Route::get('/ses', ['as'=>'ses','uses'=>'SesMailerController@index']);
+Route::get('/stats', ['as'=>'ses','uses'=>'SesStatsController@index']);
+
 Route::group(['prefix' => 'pages','before' => 'auth.basic'], function(){
     
     Route::get('/dashboard', ['as'=>'dashboard','uses'=>'PageController@dashboard']);
@@ -28,3 +31,22 @@ Route::group(['prefix' => 'pages','before' => 'auth.basic'], function(){
     
     
 });
+
+
+
+
+/* *************
+    API Routes
+   *************/
+
+Route::group(['prefix' => 'api','before' => 'auth.basic'], function(){
+    
+    Route::resource('project','ProjectsController',
+               ['only'=>['store','show','update','destroy']]);
+    Route::get('/projects', 
+               ['as'=>'projects', 'uses' => 'ProjectsController@index']);
+    
+    
+    
+});
+
